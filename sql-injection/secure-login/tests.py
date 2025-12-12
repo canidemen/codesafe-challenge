@@ -14,7 +14,7 @@ import sys
 # Import the module to test (works with both starter.py and solution.py)
 # Rename your file to 'auth.py' or modify this import
 try:
-    from solution import (
+    from starter import (
         initialize_database,
         authenticate_user,
         register_user,
@@ -32,7 +32,7 @@ try:
         DATABASE_NAME
     )
 except ImportError:
-    from solution import (
+    from starter import (
         initialize_database,
         authenticate_user,
         register_user,
