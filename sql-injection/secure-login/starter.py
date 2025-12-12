@@ -3,8 +3,6 @@ QuickCart User Authentication System
 =====================================
 This module handles user authentication, registration, and management
 for the QuickCart e-commerce platform.
-
-WARNING: This code was written by a contractor and needs security review.
 """
 
 import sqlite3
