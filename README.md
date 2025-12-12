@@ -1,73 +1,78 @@
-User Story: SQL Injection Prevention Challenge
-User Story
-As a Codesafe learner studying software security,
-I want to practice identifying and fixing SQL injection vulnerabilities in a realistic codebase,
-So that I can develop practical skills to write secure database-driven applications in my career.
+# 🛡️ Codesafe Security Challenges
 
-Acceptance Criteria
+A collection of hands-on coding challenges focused on software security, built for the [Codesafe](https://pwn.college) learning platform.
 
-Given a vulnerable Python authentication system with SQL injection flaws,
-When I identify all instances of unsafe SQL query construction,
-Then I should find at least 15 vulnerable functions using string concatenation.
-Given my understanding of parameterized queries,
-When I replace vulnerable queries with parameterized versions,
-Then all original functionality tests should still pass.
-Given my fixed implementation,
-When SQL injection attack payloads are attempted,
-Then all attacks should be blocked and the security tests should pass.
+---
 
+## 📚 Available Challenges
 
-Educational Value & Alignment with Codesafe Goals
-Connection to Product Vision
-This challenge directly supports Codesafe's mission to provide hands-on, practical security education. SQL injection consistently ranks in the OWASP Top 10 vulnerabilities, making this an essential skill for any developer.
-Learning Objectives
-Upon completing this challenge, learners will be able to:
+### SQL Injection Prevention
 
-Recognize SQL injection vulnerabilities in existing code
-Understand why string concatenation in SQL queries is dangerous
-Apply parameterized queries as the primary defense mechanism
-Test their fixes against common attack patterns
-Maintain existing functionality while improving security
+| Challenge | Difficulty | Time | Description |
+|-----------|------------|------|-------------|
+| [Secure the Login System](./sql-injection/secure-login/) | Beginner-Intermediate | 30-60 min | Fix SQL injection vulnerabilities in a user authentication system |
 
-Difficulty Assessment
-FactorRatingJustificationPrerequisite KnowledgeBeginner-IntermediateRequires basic Python and SQL understandingConceptual ComplexityLow-MediumSingle vulnerability type, clear fix patternCode VolumeMedium100+ lines to review, 15+ fixes neededTime to Complete30-60 minutesAppropriate for a single learning session
-Real-World Relevance
+---
 
-SQL injection remains one of the most exploited vulnerabilities
-The scenario mirrors actual code review tasks in industry
-Skills transfer directly to any language/framework using SQL
+## 🚀 Getting Started
 
+### Prerequisites
 
-Challenge Metadata
-AttributeValueChallenge IDsecure-loginModuleSQL Injection PreventionEstimated Time30-60 minutesDifficultyBeginner-IntermediateLanguagePython 3.xDependenciessqlite3 (standard library), pytestPrerequisitesBasic Python, Basic SQL
+- Python 3.8+
+- pytest (`pip install pytest`)
 
-Test Coverage Summary
-Functionality Tests (13 tests)
+### Running a Challenge
 
-User registration (valid, duplicate username, duplicate email)
-Authentication (valid, invalid password, nonexistent user)
-User retrieval (by username, by email)
-User updates (email, password)
-User management (deactivate, delete)
-Role-based queries (filter, count)
-Search functionality
+```bash
+# Navigate to a challenge
+cd sql-injection/secure-login
 
-Security Tests (8 tests)
+# Read the instructions
+cat README.md
 
-Login bypass attempts
-Registration injection
-Email lookup injection
-Search injection
-Role filter injection
-Password update injection
-Email update injection
-Second-order injection
+# Edit the starter code
+# (use your favorite editor)
 
-Edge Case Tests (4 tests)
+# Run tests to check your solution
+python -m pytest tests.py -v
+```
 
-Special characters in passwords
-Unicode handling
-Empty search terms
-Very long inputs
+---
 
-Total: 25 testsShareArtifactsDownload allDojoYML DojoYML User storyDocument · MD TestsPY SolutionPY StarterPY ReadmeDocument · MD Tests.cpython 312 pytest 9.0.2PYC Solution.cpython 312PYC Starter.cpython 312PYC 
+## 📁 Repository Structure
+
+```
+codesafe-challenge/
+├── dojo.yml                          # Dojo configuration
+├── README.md                         # This file
+└── sql-injection/                    # Module: SQL Injection
+    └── secure-login/                 # Challenge: Secure the Login System
+        ├── README.md                 # Challenge instructions
+        ├── starter.py                # Vulnerable code (edit this!)
+        ├── solution.py               # Reference solution
+        ├── tests.py                  # Test suite
+        └── USER_STORY.md             # User story & learning objectives
+```
+
+---
+
+## 🎓 Learning Objectives
+
+By completing these challenges, you will learn to:
+
+- 🔍 **Identify** common security vulnerabilities in code
+- 🛠️ **Apply** secure coding practices
+- ✅ **Verify** fixes using automated testing
+- 💡 **Understand** real-world attack patterns
+
+---
+
+## 📖 About Codesafe
+
+Codesafe is an educational platform designed to teach software security through practical, hands-on coding challenges. Each challenge presents a realistic scenario where learners must identify and fix security vulnerabilities.
+
+---
+
+## 📜 License
+
+This project is for educational purposes as part of UCI coursework.
