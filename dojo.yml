@@ -1,0 +1,12 @@
+id: codesafe-sql-security
+name: Codesafe SQL Security
+description: Learn to identify and fix SQL injection vulnerabilities in Python applications.
+type: topic
+modules:
+  - id: sql-injection
+    name: SQL Injection Prevention
+    description: Understand how SQL injection attacks work and how to prevent them using parameterized queries.
+    challenges:
+      - id: secure-login
+        name: Secure the Login System
+        description: A startup's login system is vulnerable to SQL injection. Your task is to fix the vulnerability while maintaining existing functionality.
